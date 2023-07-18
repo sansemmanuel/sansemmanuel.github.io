@@ -1,0 +1,202 @@
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilos para la barra de navegación */
+#main-header {
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #4E4FEB;
+}
+
+/* Estilos para las secciones */
+section {
+    padding: 2rem;
+}
+
+#inicio {
+    height: 100vh;
+    background-image: url("https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#inicio h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#inicio p {
+    font-size: 18px;
+}
+/* Estilos para la animación de tipeo */
+.typing-animation {
+    overflow: hidden; /* Ocultar el texto adicional que no cabe en el contenedor */
+    border-right: 2px solid #ffffff; /* Línea vertical de simulación de tipeo */
+    white-space: nowrap; /* Evitar que el texto se desborde a otra línea */
+    animation: typing 3s steps(40) ;
+}
+
+/* Animación de tipeo */
+@keyframes typing {
+    from {
+        width: 0; /* Ancho inicial del texto */
+    }
+    to {
+        width: 100%; /* Ancho final del texto */
+    }
+}
+
+/* Cursor parpadeante */
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent; /* Color transparente para el caret */
+    }
+    50% {
+        border-color: #ffffff; /* Color blanco para el caret en la mitad de la animación */
+    }
+}
+
+.typing-animation::after {
+    content: ''; /* Crear un pseudo-elemento para representar el cursor */
+    display: inline-block;
+    width: 2px;
+    background-color: #ffffff; /* Color blanco para el caret */
+    margin-left: 5px; /* Espacio entre el texto y el cursor */
+    animation: blink-caret 0.75s step-end infinite; /* Animación del cursor parpadeante */
+}
+#servicios {
+    background-color: #99b898;
+    color: #fff;
+}
+
+#servicios h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#servicios img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    display: block;
+}
+
+#contacto {
+    background-color: #3c86b0;
+    color: #EEEEEE;
+    padding: 50px;
+    text-align: center;
+}
+
+#contacto h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+#contact-form {
+    max-width: 400px;
+    margin: 0 auto; /* Centrar el formulario horizontalmente */
+}
+
+#contact-form label {
+    display: block;
+    margin-bottom: 8px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contact-form textarea {
+    resize: vertical;
+}
+
+#contact-form button {
+    background-color: #4E4FEB;
+    color: #EEEEEE;
+    border: none;
+    padding: 12px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+#contact-form button:hover {
+    background-color: #068FFF;
+}
+/* Estilos del footer */
+footer {
+    background-color: #2a363b;
+    color: #fff;
+    padding: 20px;
+}
+
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer ul.social-links {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+footer ul.social-links li {
+    margin-right: 10px;
+}
+
+footer ul.social-links img {
+    width: 40px;
+    height: 40px;
+}
